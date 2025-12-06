@@ -35,6 +35,13 @@ The implementation is structured to be deployable on embedded ARM platforms and 
 - **Research-friendly**
   - Works on standard CAN IDS datasets (e.g., Car-Hacking, IVN-IDS)
   - Training script, dataset loader, and example CSV schema included
+ 
+## Datasets
+
+You can download the example CAN intrusion datasets used with this code from:
+
+- [Car Hacking Dataset](https://<your-car-hacking-dataset-url>)
+- [IVN-IDS Dataset](https://<your-ivn-ids-dataset-url>)
 
 ---
 
@@ -186,3 +193,17 @@ Key configuration classes are defined in shield_can/config.py:
 **SafetyConfig**
   - `safety_critical_ids`: CAN IDs that must never be dropped.
   - `id_to_ecu`: mapping from CAN IDs to ECU names used by the self-healing policy.
+
+
+## Citing
+
+If you use SHIELD-CAN framework, please cite the corresponding work:
+
+```bash
+@article{kumar2025shieldcan,
+  title   = {SHIELD-CAN: A Self-Healing Edge-AI Intrusion Detection System for Automotive CAN Gateways},
+  author  = {Mahender Kumar and Gregory Epiphaniou and Carsten Maple},
+  journal = {Preprint},
+  year    = {2025}
+}
+```
