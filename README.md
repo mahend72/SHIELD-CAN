@@ -1,15 +1,19 @@
 # SHIELD-CAN: A Self-Healing Edge-AI Intrusion Detection System for Automotive CAN Gateways
 
-This repository contains a reference Python implementation of **SHIELD-CAN**, a self-healing edge-AI intrusion detection and response system designed for **automotive CAN gateways**.
 
-The system combines:
+Modern vehicles rely on many interconnected Electronic Control Units (ECUs) that communicate over the legacy Controller Area Network (CAN) bus, which is still vulnerable to cyber-physical attacks that can impact both safety and availability. Deploying machine learning-based intrusion detection systems (IDS) directly on in-vehicle gateways can improve protection, but also introduces tight constraints on latency, memory footprint, and safe interaction with critical workloads. It also requires that detection outputs be translated into clear, analysable mitigation actions.
 
-- A **streaming, protocol-agnostic feature pipeline** with O(1) state per active CAN ID  
-- An **edge-optimised encoder-only Transformer** operating on short windows of features  
-- A **deterministic, multi-tier self-healing policy** that maps anomaly scores and predictions into concrete gateway actions (rate limiting, selective dropping, ECU quarantine) while enforcing explicit **safety invariants**
+**SHIELD-CAN** is a self-healing edge-AI intrusion detection and response system designed specifically for automotive CAN gateways and dependability:
 
-The implementation is structured to be deployable on embedded ARM platforms and usable for research on CAN IDS/IPS, self-healing policies, and safety-aware mitigation.
+- Combines a streaming, protocol-agnostic feature pipeline with a compact encoder-only Transformer operating on short windows of traffic statistics.
+- Supports `O(1)` per-frame feature updates and sub-millisecond inference on embedded ARM hardware using 8-bit quantisation.
+- Uses a deterministic, multi-tier self-healing policy that maps anomaly scores and class predictions into:
+  - rate limiting,
+  - selective dropping, and
+  - ECU-level quarantine,
+  while enforcing safety invariants that prevent interference with safety-critical messages and bound degraded modes.
 
+![SHIELD-CAN architecture](Images/architecture.png)
 ---
 
 ## Key Features
@@ -210,4 +214,4 @@ If you use SHIELD-CAN framework, please cite the corresponding work:
 ## Contributor 
   - [Mahender Kumar](https://scholar.google.com/citations?user=Ppmct6EAAAAJ&hl=en)
   - [Gregory Epiphaniou](https://warwick.ac.uk/fac/sci/wmg/about/our-people/profile/?wmgid=2175)
-  - [Carsten Mample](https://warwick.ac.uk/fac/sci/wmg/about/our-people/profile/?wmgid=1102)
+  - [Carsten Maple](https://warwick.ac.uk/fac/sci/wmg/about/our-people/profile/?wmgid=1102)
