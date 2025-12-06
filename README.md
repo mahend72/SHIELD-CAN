@@ -204,6 +204,88 @@ Key configuration classes are defined in shield_can/config.py:
   - `id_to_ecu`: mapping from CAN IDs to ECU names used by the self-healing policy.
 
 
+## Related Publications
+
+Below are selected publications related to SHIELD-CAN, cyber-physical security, and trusted AI systems. These give additional background and context around secure architectures, intrusion detection, and self-healing systems.
+
+### Automotive & Cyber-Physical Security
+
+- **Securing connected and autonomous vehicles: analysing attack methods, mitigation strategies, and the role of large language models**  
+  *Mahender Kumar, Ruby Rani, Gregory Epiphaniou, Carsten Maple*  
+  IET Conference Proceedings, 2024.  
+  [Publisher link](https://digital-library.theiet.org/doi/10.1049/icp.2024.2534) :contentReference[oaicite:0]{index=0}  
+
+- **Leveraging Semantic Relationships to Prioritise Indicators of Compromise in Additive Manufacturing Systems**  
+  *Mahender Kumar, Gregory Epiphaniou, Carsten Maple*  
+  Lecture Notes in Computer Science (ACNS Workshops), 2023.  
+  [Springer link](https://link.springer.com/chapter/10.1007/978-3-031-41181-6_18) • [arXiv preprint](https://arxiv.org/abs/2305.04102) :contentReference[oaicite:1]{index=1}  
+
+- **A Resilient Cyber-Physical Demand Forecasting System for Critical Infrastructures against Stealthy False Data Injection Attacks**  
+  *Mahender Kumar et al.*  
+  (Cyber-physical resilience / critical infrastructure security.)  
+  [ResearchGate](https://www.researchgate.net/publication/364257202_A_Resilient_Cyber-Physical_Demand_Forecasting_System_for_Critical_Infrastructures_against_Stealthy_False_Data_Injection_Attacks) :contentReference[oaicite:2]{index=2}  
+
+
+### Secure Healthcare, IoMT & Blockchain
+
+- **A Provable Secure and Lightweight Smart Healthcare Cyber-Physical System With Public Verifiability**  
+  *Mahender Kumar, Satish Chand*  
+  IEEE Systems Journal, 16(4): 5501–5508, 2022.  
+  [IEEE Xplore](https://ieeexplore.ieee.org/document/9624169) :contentReference[oaicite:3]{index=3}  
+
+- **A Secure and Efficient Cloud-Centric Internet-of-Medical-Things-Enabled Smart Healthcare System With Public Verifiability**  
+  *Mahender Kumar, Satish Chand*  
+  IEEE Internet of Things Journal, 7(10): 10457–10465, 2020.  
+  [IEEE Xplore](https://doi.org/10.1109/JIOT.2020.3006523) :contentReference[oaicite:4]{index=4}  
+
+- **MedHypChain: A patient-centered interoperability hyperledger-based medical healthcare system: Regulation in COVID-19 pandemic**  
+  *Mahender Kumar, Satish Chand*  
+  Journal of Network and Computer Applications, 179:102975, 2021.  
+  [ScienceDirect](https://doi.org/10.1016/j.jnca.2021.102975) :contentReference[oaicite:5]{index=5}  
+
+- **A Lightweight Cloud-Assisted Identity-Based Anonymous Authentication and Key Agreement Protocol for Secure Wireless Body Area Network**  
+  *Mahender Kumar, Satish Chand*  
+  IEEE Systems Journal, 15(2): 1646–1657, 2021.  
+  [IEEE Xplore](https://ieeexplore.ieee.org/document/9099043) :contentReference[oaicite:6]{index=6}  
+
+- **A Lightweight Cloud-Assisted Identity-Based Anonymous Authentication and Key Agreement Protocol for Secure Wireless Body Area Network**  
+  (Arising note / follow-up work referenced in later literature.)  
+  [Overview via Semantic Scholar](https://www.semanticscholar.org/paper/2a32090025fe6275abe2acb58cb26a51c897aedb) :contentReference[oaicite:7]{index=7}  
+
+
+### Cryptography & Privacy-Preserving Systems
+
+- **Pairing for Greenhorn: Survey and Future Perspective**  
+  *Mahender Kumar, Satish Chand*  
+  arXiv preprint, 2021.  
+  [arXiv](https://arxiv.org/abs/2108.12392) :contentReference[oaicite:8]{index=8}  
+
+- **A Provable Secure and Lightweight Smart Healthcare Cyber-Physical System With Public Verifiability**  
+  (See Systems Journal entry above; also discussed in multiple survey and follow-up works.) :contentReference[oaicite:9]{index=9}  
+
+- **A patient-centered interoperability hyperledger-based medical healthcare system: Regulation in Covid-19 pandemic**  
+  (MedHypChain; frequently cited in blockchain / privacy preserving healthcare frameworks.) :contentReference[oaicite:10]{index=10}  
+
+
+### Additive Manufacturing & Industrial Security
+
+- **Securing Additive Manufacturing Systems: A Threat-Centric Risk Assessment Framework**  
+  *Mahender Kumar, Gregory Epiphaniou, Carsten Maple*  
+  (Communicated; threat-centric risk assessment for AM systems.) – link to be added when publicly available. :contentReference[oaicite:11]{index=11}  
+
+- **Blockchain-Based G-Code Protection with Physical-to-Digital Cryptographic Anchor in Additive Manufacturing System**  
+  *Mahender Kumar, Gregory Epiphaniou, Carsten Maple*  
+  (Communicated.) – link to be added once published. :contentReference[oaicite:12]{index=12}  
+
+
+---
+
+For a complete and always-up-to-date list of my publications, see:  
+
+- **Full publication list:** [https://mahend72.github.io/Biography/Publication.html](https://mahend72.github.io/Biography/Publication.html) :contentReference[oaicite:13]{index=13}  
+
+
+
 ## Citing
 
 If you use SHIELD-CAN framework, please cite the corresponding work:
