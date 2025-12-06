@@ -162,38 +162,13 @@ python train.py \
   --device cuda
 ```
 
-
 ## Configuration
 
 Key configuration classes are defined in shield_can/config.py:
-
-**FeatureConfig**
-  - Timing histogram size
-  - Entropy half-lives
-  - Kalman parameters
-  - Toggling half-life, etc.
-
-**ModelConfig**
-  - Feature dimensionality
-  - Transformer depth
-  - Number of heads
-  - Window size
-  - Number of classes
-  - Dropout
-
-**TrainingConfig**
-  - Batch size
-  - Number of epochs
-  - Learning rate
-  - Device
-
-**PolicyConfig**
-  - Thresholds and time constants for tiered responses
-  - Shaping (rate limiting)
-  - Dropping
-  - ECU quarantine
-  - Safe mode
-
+**FeatureConfig**: Timing histogram size, Entropy half-lives, Kalman parameters, Toggling half-life.
+**ModelConfig**: Feature dimensionality, Transformer depth, Number of heads, Window size, Number of classes, Dropout
+**TrainingConfig**: Batch size, Number of epochs, Learning rate, Device
+**PolicyConfig**: Thresholds and time constants for tiered responses, Shaping (rate limiting), Dropping, ECU quarantine, Safe mode
 **SafetyConfig**
   - `safety_critical_ids`: CAN IDs that must never be dropped.
   - `id_to_ecu`: mapping from CAN IDs to ECU names used by the self-healing policy.
@@ -205,7 +180,7 @@ Below are selected publications related to SHIELD-CAN, cyber-physical security, 
 
 ### Automotive, VANET & Cyber-Physical / ICS Security
 
-- **Secure and Anonymous Batch Authentication and Key Exchange Protocols for 6G Enabled VANETs**  
+- **[Secure and Anonymous Batch Authentication and Key Exchange Protocols for 6G Enabled VANETs](https://ieeexplore.ieee.org/document/10972137/)**  
   *Mahender Kumar, Carsten Maple*  
   IEEE Transactions on Intelligent Transportation Systems, 2025.  
 
@@ -218,7 +193,7 @@ Below are selected publications related to SHIELD-CAN, cyber-physical security, 
   IET Conference Proceedings, 2024.  
 
 - **A Resilient Cyber-Physical Demand Forecasting System for Critical Infrastructures against Stealthy False Data Injection Attacks**  
-  *Mahender Kumar et al.*  
+  *Mahender Kumar, Gregory Epiphaniou, Carsten Maple*  
 
 
 ### Additive Manufacturing & Industrial Security
