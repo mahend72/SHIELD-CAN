@@ -13,7 +13,7 @@ Modern vehicles rely on many interconnected Electronic Control Units (ECUs) that
   - ECU-level quarantine,
   while enforcing safety invariants that prevent interference with safety-critical messages and bound degraded modes.
 
-![SHIELD-CAN architecture](Images/architecture.png)
+![SHIELD-CAN architecture](Images/Shield_CAN-arch.png)
 ---
 
 ## Key Features
