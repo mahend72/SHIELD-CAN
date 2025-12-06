@@ -40,8 +40,8 @@ The implementation is structured to be deployable on embedded ARM platforms and 
 
 You can download the example CAN intrusion datasets used with this code from:
 
-- [Car Hacking Dataset](https://<your-car-hacking-dataset-url>)
-- [IVN-IDS Dataset](https://<your-ivn-ids-dataset-url>)
+- [Car Hacking Dataset](https://www.kaggle.com/datasets/pranavjha24/car-hacking-dataset)
+- [IVN-IDS Dataset](https://www.kaggle.com/datasets/daksh0511/ivn-ids/code)
 
 ---
 
@@ -207,3 +207,7 @@ If you use SHIELD-CAN framework, please cite the corresponding work:
   year    = {2025}
 }
 ```
+## Contributor 
+  - [Mahender Kumar](https://scholar.google.com/citations?user=Ppmct6EAAAAJ&hl=en)
+  - [Gregory Epiphaniou](https://warwick.ac.uk/fac/sci/wmg/about/our-people/profile/?wmgid=2175)
+  - [Carsten Mample](https://warwick.ac.uk/fac/sci/wmg/about/our-people/profile/?wmgid=1102)
