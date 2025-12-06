@@ -18,7 +18,6 @@ Modern vehicles rely on many interconnected Electronic Control Units (ECUs) that
   <img src="Images/Shield-CAN-arch.png" alt="SHIELD-CAN architecture" width="500">
 </p>
 
-
 ---
 
 ## Key Features
@@ -58,13 +57,9 @@ You can download the example CAN intrusion datasets used with this code from:
 
 ```text
 .
-├── LICENSE
 ├── README.md
 ├── requirements.txt
 ├── setup.py
-├── .gitignore
-├── examples/
-│   └── sample_can_log.csv
 ├── train.py
 └── shield_can/
     ├── __init__.py
