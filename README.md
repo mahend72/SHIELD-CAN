@@ -38,10 +38,10 @@ At a high level, SHIELD-CAN consists of three tightly coupled components:
 ---
 ## Architecture
 
-If you have an architecture diagram in `docs/architecture.png`, you can render it as:
+If you have an architecture diagram in `Images/Shield-CAN-arch.png`, you can render it as:
 
 <p align="center">
-  <img src="Images/Sheild-CAN-arch.png" alt="SHIELD-CAN architecture" width="500">
+  <img src="Images/Shield-CAN-arch.png" alt="SHIELD-CAN architecture" width="500">
 </p>
 
 ---
