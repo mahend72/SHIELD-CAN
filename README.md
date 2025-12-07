@@ -11,7 +11,7 @@ Modern vehicles comprise a large number of interconnected Electronic Control Uni
 - A **deterministic, multi-tier self-healing policy** that translates anomaly scores and class predictions into gateway actions such as rate limiting, selective dropping, and ECU quarantine, while enforcing explicit safety invariants.
 
 ---
-## Overview
+## Key features
 
 At a high level, SHIELD-CAN consists of three tightly coupled components:
 
@@ -41,35 +41,11 @@ At a high level, SHIELD-CAN consists of three tightly coupled components:
 If you have an architecture diagram in `docs/architecture.png`, you can render it as:
 
 <p align="center">
-  <img src="docs/architecture.png" alt="SHIELD-CAN architecture" width="500">
+  <img src="Images/Sheild-CAN-arch.png" alt="SHIELD-CAN architecture" width="500">
 </p>
 
 ---
 
-## Key Features
-
-- **Streaming feature extraction**
-  - Protocol-agnostic, operates directly on raw CAN frames
-  - O(1) state per CAN ID; constant-time per-frame updates
-  - Dual entropy measures (timing & payload), Kalman-based timing analysis, DLC drift, byte-position toggling
-
-- **Edge-optimised Transformer model**
-  - Encoder-only Transformer over short windows of features
-  - Single STAT token for window-level classification
-  - Static shapes and compact architecture suitable for quantisation and edge deployment
-
-- **Deterministic self-healing policy**
-  - Multi-tier response: logging → shaping (rate limiting) → dropping → ECU quarantine → (optional) safe-mode
-  - Enforces safety invariants (e.g. never drop safety-critical IDs, bounded degraded modes)
-
-- **Gateway-oriented design**
-  - Streaming feature extractor + model + policy + gateway simulator
-  - Designed to sit at an in-vehicle gateway between CAN segments
-
-- **Research-friendly**
-  - Works on standard CAN IDS datasets (e.g., Car-Hacking, IVN-IDS)
-  - Training script, dataset loader, and example CSV schema included
- 
 ## Datasets
 
 You can download the example CAN intrusion datasets used with this code from:
@@ -135,7 +111,7 @@ pip install -r requirements.txt
 Or install as an editable package:
 
 ```bash
-pip install -e .
+pip install -e.
 ```
 
 **Python version**: 3.9+ is recommended.
