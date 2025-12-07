@@ -1,21 +1,47 @@
 # SHIELD-CAN: A Self-Healing Edge-AI Intrusion Detection System for Automotive CAN Gateways
 
+This repository provides the reference implementation of **SHIELD-CAN**, a self-healing edge-AI intrusion detection and response system for automotive CAN gateways.
 
-Modern vehicles rely on many interconnected Electronic Control Units (ECUs) that communicate over the legacy Controller Area Network (CAN) bus, which is still vulnerable to cyber-physical attacks that can impact both safety and availability. Deploying machine learning-based intrusion detection systems (IDS) directly on in-vehicle gateways can improve protection, but also introduces tight constraints on latency, memory footprint, and safe interaction with critical workloads. It also requires that detection outputs be translated into clear, analysable mitigation actions.
+Modern vehicles comprise a large number of interconnected Electronic Control Units (ECUs) communicating over the legacy Controller Area Network (CAN) bus, which remains vulnerable to cyber–physical attacks that may compromise both safety and availability. Deploying machine learning–based intrusion detection systems (IDS) directly on in-vehicle gateways can provide timely, context-aware detection, but also imposes strict constraints on latency, memory, interpretability, and safe interaction with safety-critical workloads. Detection outputs must be mapped to well-specified mitigation actions whose impact on the system’s safety and performance can be analysed.
 
-**SHIELD-CAN** is a self-healing edge-AI intrusion detection and response system designed specifically for automotive CAN gateways and dependability:
+**SHIELD-CAN** addresses these challenges by combining:
 
-- Combines a streaming, protocol-agnostic feature pipeline with a compact encoder-only Transformer operating on short windows of traffic statistics.
-- Supports `O(1)` per-frame feature updates and sub-millisecond inference on embedded ARM hardware using 8-bit quantisation.
-- Uses a deterministic, multi-tier self-healing policy that maps anomaly scores and class predictions into:
-  - rate limiting,
-  - selective dropping, and
-  - ECU-level quarantine,
-  while enforcing safety invariants that prevent interference with safety-critical messages and bound degraded modes.
+- A **streaming, protocol-agnostic feature-extraction pipeline** over raw CAN frames.
+- A **compact encoder-only Transformer** operating on short windows of traffic statistics, designed for edge deployment.
+- A **deterministic, multi-tier self-healing policy** that translates anomaly scores and class predictions into gateway actions such as rate limiting, selective dropping, and ECU quarantine, while enforcing explicit safety invariants.
 
+---
+## Overview
+
+At a high level, SHIELD-CAN consists of three tightly coupled components:
+
+1. **Streaming Feature Extractor**  
+   - Processes raw CAN frames in chronological order.  
+   - Maintains **O(1)** state per active CAN ID and computes lightweight traffic statistics, including timing and payload entropy, local inter-arrival dynamics (e.g. Kalman-style residuals), DLC drift and byte-level toggling behaviour.  
+   - Produces a fixed-length feature vector per frame, independent of OEM-specific payload semantics.
+
+2. **Edge Transformer Model (`EdgeTransformer`)**  
+   - Encoder-only Transformer applied to short windows of feature vectors.  
+   - Uses a single STAT token for window-level classification.  
+   - Designed with static shapes, moderate depth and width to support **8-bit quantisation** and efficient inference on ARM-based gateway hardware.
+
+3. **Self-Healing Policy and Gateway Loop**  
+   - Maps model outputs (logits, anomaly scores, class labels) into a **multi-tier response**:
+     - Tier 0: monitoring and logging  
+     - Tier 1: traffic shaping / rate limiting  
+     - Tier 2: selective frame dropping  
+     - Tier 3: ECU-level quarantine  
+     - Tier 4: optional gateway safe mode  
+   - Enforces **safety invariants**, e.g. safety-critical frame IDs may never be dropped, and degraded modes are bounded in duration and severity.
+   - Can be integrated at an in-vehicle gateway to enforce decisions in real time.
+
+---
+## Architecture
+
+If you have an architecture diagram in `docs/architecture.png`, you can render it as:
 
 <p align="center">
-  <img src="Images/Shield-CAN-arch.png" alt="SHIELD-CAN architecture" width="500">
+  <img src="docs/architecture.png" alt="SHIELD-CAN architecture" width="500">
 </p>
 
 ---
