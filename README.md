@@ -28,7 +28,7 @@ At a high level, SHIELD-CAN consists of three tightly coupled components:
 3. **Self-Healing Policy and Gateway Loop**  
    - Maps model outputs (logits, anomaly scores, class labels) into a **multi-tier response**:
      - Tier 0: monitoring and logging  
-     - Tier 1: traffic shaping / rate limiting  
+     - Tier 1: traffic shaping/rate limiting  
      - Tier 2: selective frame dropping  
      - Tier 3: ECU-level quarantine  
      - Tier 4: optional gateway safe mode  
@@ -38,10 +38,10 @@ At a high level, SHIELD-CAN consists of three tightly coupled components:
 ---
 ## Architecture
 
-If you have an architecture diagram in `Images/Shield-CAN-arch.png`, you can render it as:
+Here is a brief architectural diagram:
 
 <p align="center">
-  <img src="Images/Shield-CAN-arch.png" alt="SHIELD-CAN architecture" width="500">
+  <img src="Images/Shield-CAN-arch.png" alt="SHIELD-CAN architecture" width="600">
 </p>
 
 ---
