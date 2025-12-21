@@ -48,7 +48,7 @@ If you have an architecture diagram in `Images/Shield-CAN-arch.png`, you can ren
 
 ## Datasets
 
-You can download the example CAN intrusion datasets used with this code from:
+You can download the example CAN intrusion datasets used with this code from following links:
 
 - [Car Hacking Dataset](https://www.kaggle.com/datasets/pranavjha24/car-hacking-dataset)
 - [IVN-IDS Dataset](https://www.kaggle.com/datasets/daksh0511/ivn-ids/code)
