@@ -2,7 +2,7 @@
 
 This repository provides the reference implementation of **SHIELD-CAN**, a self-healing edge-AI intrusion detection and response system for automotive CAN gateways.
 
-Modern vehicles comprise a large number of interconnected Electronic Control Units (ECUs) communicating over the legacy Controller Area Network (CAN) bus, which remains vulnerable to cyber–physical attacks that may compromise both safety and availability. Deploying machine learning–based intrusion detection systems (IDS) directly on in-vehicle gateways can provide timely, context-aware detection, but also imposes strict constraints on latency, memory, interpretability, and safe interaction with safety-critical workloads. Detection outputs must be mapped to well-specified mitigation actions whose impact on the system’s safety and performance can be analysed.
+Modern vehicles comprise a large number of interconnected Electronic Control Units (ECUs) communicating over the legacy Controller Area Network (CAN) bus, which remains vulnerable to cyber–physical attacks that may compromise both safety and availability. Deploying machine learning–based intrusion detection systems (IDS) directly on in-vehicle gateways can provide timely, context-aware detection, but also imposes strict constraints on latency, memory, interpretability, and safe interaction with safety-critical workloads. Detection outputs must be mapped to well-specified mitigation actions whose impact on the system’s safety and performance can be analyzed.
 
 **SHIELD-CAN** addresses these challenges by combining:
 
