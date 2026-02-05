@@ -174,7 +174,7 @@ Key configuration classes are defined in shield_can/config.py:
 
 **TrainingConfig**: Batch size, Number of epochs, Learning rate, Device
 
-**PolicyConfig**: Thresholds and time constants for tiered responses, Shaping (rate limiting), Dropping, ECU quarantine, Safe mode
+**PolicyConfig**: Thresholds and time constants for tiered responses, Shaping (rate limiting), Dropping, ECU quarantine, and safe mode
 
 **SafetyConfig**
   - `safety_critical_ids`: CAN IDs that must never be dropped.
