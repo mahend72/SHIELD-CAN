@@ -184,7 +184,7 @@ Key configuration classes are defined in shield_can/config.py:
 
 ## Related Publications
 
-Below are selected publications related to SHIELD-CAN, cyber-physical security, additive manufacturing security, threat intelligence, and trusted AI systems. These give additional background and context around secure architectures, intrusion detection, self-healing, and risk assessment.
+Below are selected publications related to SHIELD-CAN, cyber-physical security, additive manufacturing, threat intelligence, and trusted AI systems. These give additional background and context around secure architectures, intrusion detection, self-healing, and risk assessment.
 
 ### Automotive, VANET & Cyber-Physical / ICS Security
 
