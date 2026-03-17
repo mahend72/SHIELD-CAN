@@ -259,7 +259,7 @@ For a complete and up-to-date list of publications, please refer to my full publ
 
 ## Citing
 
-If you use SHIELD-CAN framework, please cite the corresponding work:
+If you use the SHIELD-CAN framework, please cite corresponding work:
 
 ```bash
 @article{kumar2025shieldcan,
